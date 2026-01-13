@@ -4,7 +4,6 @@ import About from "../components/About/About";
 import Career from "../components/Career/Career";
 import Home from "../pages/Home/Home";
 import CategoryNews from "../pages/CategoryNews/CategoryNews";
-import Category from "../components/HomeLayout/Category";
 
 const router = createBrowserRouter([
   {
@@ -14,9 +13,9 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       {
         path: "/category/:id",
+        loader: () => fetch('/news.json'),
         Component: CategoryNews,
       },
-      { path: "/" },
     ],
     },
   

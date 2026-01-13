@@ -20,7 +20,7 @@ const MainLayout = () => {
          <Navbar></Navbar>
         </nav>
       </header>
-          <main className="grid grid-cols-12 mt-15">
+          <main className="grid grid-cols-12 mt-15 gap-6">
         <aside className="col-span-3">
           <LeftAside></LeftAside>
         </aside>
