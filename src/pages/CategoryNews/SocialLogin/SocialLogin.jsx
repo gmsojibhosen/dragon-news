@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 const SocialLogin = () => {
   return (
-    <div>
+    <div className="p-4">
       <h2 className="font-semibold text-xl"> Login With</h2>
       <div className="mt-5 space-y-4">
         <button className="btn w-full bg-white border-blue-600">
