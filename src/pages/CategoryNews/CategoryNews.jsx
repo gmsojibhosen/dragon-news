@@ -30,12 +30,12 @@ const CategoryNews = () => {
     <div>
       <h2 className="font-semibold text-xl">
         Total({categoryNews.length}) News Found
-          </h2>
-          <div className="grid grid-cols-1 gap-5 mt-5">
-              {
-                  categoryNews.map(news => <NewsCard news = {news} key={news.id}></NewsCard>)
-              }
-          </div>
+      </h2>
+      <div className="grid grid-cols-1 gap-5 mt-5">
+        {categoryNews.map((news) => (
+          <NewsCard news={news} key={news.id}></NewsCard>
+        ))}
+      </div>
     </div>
   );
 };
