@@ -12,7 +12,7 @@ const Category = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <h2 className="font-semibold text-xl text-primary ">
         All Category({categories.length})
       </h2>

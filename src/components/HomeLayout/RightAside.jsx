@@ -6,7 +6,7 @@ import BGHero from "../../pages/CategoryNews/SocialLogin/BGHero";
 
 const RightAside = () => {
   return (
-    <div className="space-y-7">
+    <div className="space-y-7 sticky top-5">
       <SocialLogin></SocialLogin>
       <FindSocial></FindSocial>
       <QZone></QZone>

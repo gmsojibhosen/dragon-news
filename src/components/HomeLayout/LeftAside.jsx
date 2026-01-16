@@ -3,7 +3,7 @@ import Category from "./Category";
 
 const LeftAside = () => {
   return (
-    <div>
+    <div className="sticky top-5">
       <Suspense
         fallback={<span className="loading loading-dots loading-xl"></span>}
       >
