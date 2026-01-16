@@ -5,6 +5,10 @@ import Career from "../components/Career/Career";
 import Home from "../pages/Home/Home";
 import CategoryNews from "../pages/CategoryNews/CategoryNews";
 
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+import AuthLayout from "../laytouts/AuthLayout";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,15 +17,25 @@ const router = createBrowserRouter([
       { index: true, Component: Home },
       {
         path: "/category/:id",
-        loader: () => fetch('/news.json'),
+        loader: () => fetch("/news.json"),
         Component: CategoryNews,
       },
     ],
-    },
-  
+  },
+
   {
     path: "/auth",
-    element: <h1>Auth element page</h1>,
+    Component: AuthLayout,
+    children: [
+      {
+        path: "login",
+        Component: Login,
+      },
+      {
+        path: "register",
+        Component: Register,
+      },
+    ],
   },
   {
     path: "/news",
@@ -29,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/about",
-    Component: About ,
+    Component: About,
   },
   {
     path: "/career",
@@ -37,7 +51,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: "404 Error Page",
+    element: <h1>404 Error Page</h1>,
   },
 ]);
 
